@@ -48,7 +48,6 @@ const createNewTaskElement = function (taskString) {
 };
 
 const addTask = function () {
-  console.log('Add Task...');
   if (!taskInput.value) return;
   const listItem = createNewTaskElement(taskInput.value);
 
@@ -61,9 +60,6 @@ const addTask = function () {
 //Edit an existing task.
 
 const editTask = function () {
-  console.log('Edit Task...');
-  console.log("Change 'edit' to 'save'");
-
   const listItem = this.parentNode;
 
   const editInput = listItem.querySelector('input[type=text]');
@@ -82,16 +78,12 @@ const editTask = function () {
 
 //Delete task.
 const deleteTask = function () {
-  console.log('Delete Task...');
-
   const listItem = this.parentNode;
   listItem.remove();
 };
 
 //Mark task completed
 const markTaskCompleted = function () {
-  console.log('Complete Task...');
-
   //Append the task list item to the #completed-tasks
   const listItem = this.parentNode;
   completedTasksHolder.appendChild(listItem);
@@ -99,7 +91,6 @@ const markTaskCompleted = function () {
 };
 
 const markTaskIncomplete = function () {
-  console.log('Incomplete Task...');
   const listItem = this.parentNode;
   incompleteTaskHolder.appendChild(listItem);
   bindTaskEvents(listItem, markTaskCompleted);
@@ -111,7 +102,6 @@ const markTaskIncomplete = function () {
 addButton.addEventListener('click', addTask);
 
 const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
-  console.log('bind list item events');
   //select ListItems children
   const checkBox = taskListItem.querySelector('input[type=checkbox]');
   const editButton = taskListItem.querySelector('button.edit');
