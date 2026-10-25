@@ -16,16 +16,11 @@ const completedTasksHolder = document.getElementById('completed-tasks'); //compl
 const createNewTaskElement = function (taskString) {
   const listItem = document.createElement('li');
 
-  //input (checkbox)
   const checkBox = document.createElement('input'); //checkbx
-  //label
   const label = document.createElement('label'); //label
-  //input (text)
   const editInput = document.createElement('input'); //text
-  //button.edit
   const editButton = document.createElement('button'); //edit button
 
-  //button.delete
   const deleteButton = document.createElement('button'); //delete button
   const deleteButtonImg = document.createElement('img'); //delete button image
 
@@ -44,7 +39,6 @@ const createNewTaskElement = function (taskString) {
   deleteButtonImg.src = './remove.svg';
   deleteButton.appendChild(deleteButtonImg);
 
-  //and appending.
   listItem.appendChild(checkBox);
   listItem.appendChild(label);
   listItem.appendChild(editInput);
