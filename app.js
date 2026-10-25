@@ -16,13 +16,13 @@ const completedTasksHolder = document.getElementById('completed-tasks'); //compl
 const createNewTaskElement = function (taskString) {
   const listItem = document.createElement('li');
 
-  const checkBox = document.createElement('input'); //checkbx
-  const label = document.createElement('label'); //label
-  const editInput = document.createElement('input'); //text
-  const editButton = document.createElement('button'); //edit button
+  const checkBox = document.createElement('input');
+  const label = document.createElement('label');
+  const editInput = document.createElement('input');
+  const editButton = document.createElement('button');
 
-  const deleteButton = document.createElement('button'); //delete button
-  const deleteButtonImg = document.createElement('img'); //delete button image
+  const deleteButton = document.createElement('button');
+  const deleteButtonImg = document.createElement('img');
 
   label.innerText = taskString;
   label.className = 'task';
