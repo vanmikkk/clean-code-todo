@@ -90,9 +90,7 @@ const deleteTask = function () {
   console.log('Delete Task...');
 
   const listItem = this.parentNode;
-  const ul = listItem.parentNode;
-  //Remove the parent list item from the ul.
-  ul.removeChild(listItem);
+  listItem.remove();
 };
 
 //Mark task completed
