@@ -80,7 +80,6 @@ const editTask = function () {
     editBtn.innerText = 'Save';
   }
 
-  //toggle .editmode on the parent.
   listItem.classList.toggle('editMode');
 };
 
