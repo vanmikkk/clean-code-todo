@@ -71,9 +71,7 @@ const editTask = function () {
   const editInput = listItem.querySelector('input[type=text]');
   const label = listItem.querySelector('label');
   const editBtn = listItem.querySelector('.edit');
-  const containsClass = listItem.classList.contains('editMode');
-  //If class of the parent is .editmode
-  if (containsClass) {
+  if (listItem.classList.contains('editMode')) {
     //switch to .editmode
     //label becomes the inputs value.
     label.innerText = editInput.value;
